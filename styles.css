@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:wght@300;400;600&display=swap');
+
+:root {
+  --primary-color: #8a0303;
+  --secondary-color: #1c0101;
+  --background-color: #0a0a0a;
+  --text-color: #e0e0e0;
+  --album-bg-color: #141414;
+  --accent-color: #bf0603;
+}
+
+body {
+  font-family: 'Cormorant Garamond', serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  background-color: var(--secondary-color);
+  text-align: center;
+  padding: 2rem 0;
+}
+
+h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--accent-color);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+  background-color: var(--primary-color);
+  padding: 1rem;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul li {
+  flex: 1;
+  text-align: center;
+}
+
+nav ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 400;
+  padding: 5px 10px;
+  border: 1px solid transparent;
+  display: inline-block;
+  font-size: 1.1rem; 
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+main {
+  padding: 40px 0;
+}
+
+h2 {
+  font-family: 'Cinzel', serif;
+  color: var(--accent-color);
+  font-size: 2rem; 
+}
+
+h3 {
+  font-family: 'Cinzel', serif;
+  color: var(--accent-color);
+  font-size: 1.75rem; 
+}
+
+h4 {
+  font-family: 'Cinzel', serif;
+  color: var(--accent-color);
+  font-size: 1.5rem; 
+}
+
+.album {
+  background-color: var(--album-bg-color);
+  margin-bottom: 30px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.album-content {
+  flex: 1;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.album h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.album p {
+  font-weight: 300;
+  margin-bottom: 0;
+  font-size: 1.1rem; 
+}
+
+.album img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+footer {
+  color: var(--text-color);
+  text-align: center;
+  font-size: 1rem; 
+}
+
+@media (max-width: 554px) {
+  body {
+    font-size: 16px; 
+  }
+
+  .album {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  
+  .album-content {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 15px;
+    text-align: center;
+  }
+  
+  .album img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+}
+
+@media (min-width: 555px) and (max-width: 799px) {
+  .container {
+    padding: 15px;
+  }
+  
+  .album img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (min-width: 800px) {
+  h1 {
+    font-size: 3rem;
+  }
+  
+  .album {
+    padding: 30px;
+  }
+}
